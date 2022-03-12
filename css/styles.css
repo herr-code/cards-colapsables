@@ -1,0 +1,93 @@
+/*Importar fuentes*/
+/***
+	Nota: Forma no recomendada por que si fallara el import el resto de los estilos ya no se
+	aplicaría el resto de los estilos. 
+	Sólo es para recordar que existe esta forma de agregar fuentes.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+html, 
+body {
+	height: 100%;
+}
+
+body {
+	background-color: lightgray;
+	font-family: 'Lexend Deca', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main {
+	display: flex;
+	max-width: 768px;
+	min-width: 320px;
+}
+
+.column {
+	color: white;
+	padding: 2rem;
+	width: 25%;
+	transition: width 0.3s ease-in-out;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.column--active {
+	width: 50%;
+}
+
+.column:first-of-type {
+	border-radius: 1rem 0 0 1rem;
+}
+
+.column:last-of-type {
+	border-radius: 0 1rem 1rem 0;
+}
+
+.column--orange {
+	background-color: hsl(31, 77%, 52%);
+}
+
+.column--green {
+	background-color: hsl(184, 100%, 22%);
+}
+
+.column--darkGreen {
+	background-color: hsl(179, 100%, 13%);
+}
+
+.column__title {
+	font-family: 'Big Shoulders Display', cursive;
+	text-transform: uppercase;
+}
+
+.column__text {
+	font-size: 14px;
+	margin-bottom: 4rem;
+	flex-grow: 1;
+}
+
+.column__link {
+	text-decoration: none;
+	background-color: white;
+	border-radius: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 12px;
+}
+
+.column--orange .column__link {
+	color: hsl(31, 77%, 52%);
+}
+
+.column--green .column__link {
+	color: hsl(184, 100%, 22%);
+}
+
+.column--darkGreen .column__link {
+	color: hsl(179, 100%, 13%);
+}
